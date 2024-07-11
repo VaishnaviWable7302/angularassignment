@@ -1,0 +1,120 @@
+# Customer Management System
+
+## Overview
+This project is a full-stack application for managing customer data. It includes:
+- A **Backend** server built with Node.js and Express for handling API requests.
+- A **PostgreSQL Database** for storing customer information.
+- A **Frontend** built with Angular for interacting with the backend API.
+
+## Features
+- CRUD operations for customer data (Create, Read, Update, Delete).
+- Responsive design for a better user experience.
+- Form validations on the frontend.
+- Data validation and sanitization on the backend.
+- Error handling on both frontend and backend.
+
+## Technologies Used
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL
+- **Frontend**: Angular
+- **Other Tools**: JSON, CORS middleware
+
+## Prerequisites
+- Node.js and npm installed.
+- PostgreSQL installed and running.
+- Angular CLI installed.
+
+## Getting Started
+
+### Backend Setup
+
+1. **Clone the Repository**
+
+   git clone https://github.com/VaishnaviWable7302/angualr.js-assignment
+   cd customer-management-system/backend
+
+2.**Install Dependencies**
+
+npm install
+
+3.**Set Up PostgreSQL Database**
+
+Create a PostgreSQL database named customerdb.
+Create a table for storing customer data:
+
+CREATE TABLE customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(15)
+);
+
+4.**Configure Environment Variables**
+
+Create a .env file in the backend directory and add your PostgreSQL connection details:
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=yourusername
+DB_PASSWORD=yourpassword
+DB_NAME=customerdb
+
+5.**Run the Server**
+
+npm start
+
+6.**Frontend Setup**
+Navigate to the Frontend Directory
+cd ../frontend
+
+7.**Install Dependencies**
+
+npm install
+
+8.**Run the Angular Application**
+
+ng serve
+
+9.**API Endpoints**
+**Customer API
+GET /customers: Get a list of all customers.
+POST /customers: Add a new customer.
+PUT /customers/
+Update an existing customer.
+DELETE /customers/
+: Delete a customer.
+
+
+**Instructions for Use
+Adding a New Customer
+Navigate to the "Add Customer" view
+Fill in the customer details and submit the form.
+
+**Updating an Existing Customer
+Navigate to the list of customers.
+Click on the "Edit" button next to the customer you want to update.
+Update the customer details and submit the form.
+
+**Deleting a Customer
+Navigate to the list of customers.
+Click on the "Delete" button next to the customer you want to delete.
+
+**Error Handling
+Backend: Handles database connection errors, validation errors, and other server errors.
+Frontend: Displays user-friendly error messages for API errors, form validation errors, etc.
+
+**Data Validation and Sanitization
+All input data is validated and sanitized on the backend to prevent SQL injection and other security vulnerabilities.
+
+**Conclusion:**
+This project demonstrates a complete full-stack application for managing customer data using Node.js, Express, PostgreSQL, and Angular. Feel free to contribute and enhance the functionality as needed.
+
+**License**
+This project is licensed under the MIT License.
+
+
+### Notes:
+- Replace `yourusername` in the clone URL with your actual GitHub username if you're using a real GitHub repository.
+- Adjust database connection details and other configurations as per your environment.
+- Ensure proper error handling and validation to make the application robust and secure.
+
